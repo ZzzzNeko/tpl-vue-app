@@ -1,0 +1,25 @@
+=ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  word-wrap: normal
+
+=multi-line-ellipsis($which-line)
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: $which-line
+
+=prefix($property, $value)
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  #{$property}: $value
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content

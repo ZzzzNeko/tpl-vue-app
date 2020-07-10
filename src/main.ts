@@ -4,8 +4,7 @@ import plugins from "@/plugins";
 import directives from '@/directives'
 import router from '@/router'
 import store from '@/store'
-import '@/style/reset.scss'
-import '@/style/common.scss'
+import '@/style/index.sass'
 
 Vue.use(plugins);
 Vue.use(directives)

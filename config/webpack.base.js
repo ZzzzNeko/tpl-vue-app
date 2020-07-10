@@ -21,6 +21,8 @@ module.exports = {
     // 模块解析相关配置,
     alias: {
       "@": path.resolve(__dirname, "../src/"),
+      "@css/vars$": getResolvePath("../src/style/_variables.sass"),
+      "@css/mixs$": getResolvePath("../src/style/_mixins.sass"),
     },
     extensions: ['.js', '.ts', '.json', '.vue']
   },

@@ -1,0 +1,83 @@
+@import './colorlib'
+
+// 尺寸类别
+$sizes: xs sm md lg xl
+// 状态类别
+$states: default primary success warning failure
+
+// 字体尺寸
+$font-xs: 12px
+$font-sm: 14px
+$font-md: 16px
+$font-lg: 20px
+$font-xl: 24px
+$font-sizes: $font-xs $font-sm $font-md $font-lg $font-xl
+
+// $screen-xs 即小于 576px
+$screen-sm: 576px
+$screen-md: 768px
+$screen-lg: 992px
+$screen-xl: 1200px
+
+// breakpoints
+$screen-xs-max: 720px
+$screen-sm-max: 960px
+$screen-md-max: 1280px
+$screen-lg-max: 1600px
+$screen-xl-min: 1600px
+
+// 字体颜色
+$font-default: $grey-7
+$font-primary: $blue-7
+$font-success: $lime-7
+$font-warning: $orange-7
+$font-failure: $red-7
+$font-colors: $font-default, $font-primary, $font-success, $font-warning, $font-failure
+
+// 边框颜色
+$border-default: $grey-6
+$border-primary: $blue-6
+$border-success: $lime-6
+$border-warning: $orange-6
+$border-failure: $red-6
+$border-colors: $border-default, $border-primary, $border-success, $border-warning, $border-failure
+
+// 背景颜色
+$background-default: $grey-5
+$background-primary: $blue-5
+$background-success: $lime-5
+$background-warning: $orange-5
+$background-failure: $red-5
+$background-colors: $background-default, $background-primary, $background-success, $background-warning, $background-failure
+
+// z-index
+$zindex-menu                : 900
+$zindex-modal               : 1000
+$zindex-notice              : 1010
+$zindex-message             : 1010
+$zindex-popover             : 1020
+$zindex-dropdown            : 1050
+$zindex-tooltip             : 1050
+$zindex-loading             : 1080
+
+// 海拔阴影
+$umbra: rgba(0,0,0,0.2)
+$penumbra: rgba(0,0,0,0.14)
+$ambient: rgba(0,0,0,0.12)
+$umbra-light: rgba(white, 0.2)
+$penumbra-light: rgba(white, 0.14)
+$ambient-light: rgba(white, 0.12)
+
+$elevation0: 0px 0px 0px  0px $umbra, 0px  0px  0px 0px $penumbra, 0px 0px  0px 0px $ambient
+$elevation1: 0px 3px 1px -2px $umbra, 0px  2px  2px 0px $penumbra, 0px 1px  5px 0px $ambient
+$elevation2: 0px 3px 5px -1px $umbra, 0px  5px  8px 0px $penumbra, 0px 1px 14px 0px $ambient
+$elevation3: 0px 5px 5px -3px $umbra, 0px  8px 10px 1px $penumbra, 0px 3px 14px 2px $ambient
+$elevation4: 0px 6px 7px -4px $umbra, 0px 11px 15px 1px $penumbra, 0px 4px 20px 3px $ambient
+$elevation5: 0px 7px 9px -4px $umbra, 0px 14px 21px 2px $penumbra, 0px 5px 26px 4px $ambient
+
+$elevation0-light: 0px 0px 0px  0px $umbra-light, 0px  0px  0px 0px $penumbra-light, 0px 0px  0px 0px $ambient-light
+$elevation1-light: 0px 3px 1px -2px $umbra-light, 0px  2px  2px 0px $penumbra-light, 0px 1px  5px 0px $ambient-light
+$elevation2-light: 0px 3px 5px -1px $umbra-light, 0px  5px  8px 0px $penumbra-light, 0px 1px 14px 0px $ambient-light
+$elevation3-light: 0px 5px 5px -3px $umbra-light, 0px  8px 10px 1px $penumbra-light, 0px 3px 14px 2px $ambient-light
+$elevation4-light: 0px 6px 7px -4px $umbra-light, 0px 11px 15px 1px $penumbra-light, 0px 4px 20px 3px $ambient-light
+$elevation5-light: 0px 7px 9px -4px $umbra-light, 0px 14px 21px 2px $penumbra-light, 0px 5px 26px 4px $ambient-light
