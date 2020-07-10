@@ -1,0 +1,46 @@
+{
+  "name": "pt-vue-app",
+  "version": "1.0.0",
+  "author": "ZzzNeko",
+  "description": "A project init template for vue app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZzzNeko/pt-vue-app.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "serve": "webpack-dev-server --config ./config/webpack.config.js --mode=development",
+    "build": "webpack --config ./config/webpack.config.js --mode=production"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "swiper": "^5.4.5",
+    "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-router": "^3.3.4",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^4.3.0",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.26.8",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.0",
+    "typescript": "^3.9.5",
+    "url-loader": "^4.1.0",
+    "vue-loader": "^15.9.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
