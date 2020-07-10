@@ -7,9 +7,7 @@
 import Vue from "vue";
 export default Vue.extend({
   data() {
-    return {
-      greeting: "Vue App"
-    };
+    return {};
   }
 });
 </script>
