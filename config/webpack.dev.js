@@ -1,8 +1,8 @@
 const webpack = require("webpack"); //用于引入webpack内的模块
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
- 
+const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin");
+
 module.exports = {
-  mode: 'development',
+  mode: "development",
   devtool: "cheap-module-eval-source-map", // source map 相关配置
   devServer: {
     // webpack-dev-server 相关配置
@@ -13,12 +13,12 @@ module.exports = {
       maxModules: 0,
       errors: true,
       warnings: true,
-      color: true
-    }
+      color: true,
+    },
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // HMR 插件
     new webpack.NamedModulesPlugin(), // 开启 HMR 时显示模块相对路径
     new FriendlyErrorsPlugin(),
-  ]
-}
+  ],
+};

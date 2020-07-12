@@ -7,10 +7,8 @@ export default Vue.extend({
   name: "PageError",
   data() {
     return {};
-  }
+  },
 });
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>
