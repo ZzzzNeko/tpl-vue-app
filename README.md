@@ -6,9 +6,24 @@ Vue App 初始化模板
 
 ```cmd
 yarn install
-yarn run serve
-yarn run build
+yarn run serve [APP_ENV]
+yarn run build [APP_ENV]
 ```
+
+## 全局变量
+
+```ts
+declare const APP_ENV: string;
+declare const APP_MODE: "development" | "production";
+```
+
+通常项目开发时可能涉及到多个环境，如 本地、测试、正式 等，额外提供 `APP_ENV` 作为命令行参数注入项目全局
+
+## 脚本流程
+
+script 目录下提供了 preprocess.js 和 postprocess.js 文件，<br>
+`preprocess` 中使用了 commander 处理命令行交互，<br>
+`postprocess` 在 `build` 命令执行后默认调用
 
 ## 项目目录
 

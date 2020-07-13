@@ -13,11 +13,12 @@
   },
   "homepage": "https://github.com/ZzzNeko/pt-vue-app#readme",
   "scripts": {
-    "serve": "webpack-dev-server --config ./config/webpack.config.js --mode=development",
-    "build": "webpack --config ./config/webpack.config.js --mode=production"
+    "serve": "node script/preprocess serve",
+    "build": "node script/preprocess build"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "commander": "^5.1.0",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4",
     "vuex": "^3.4.0"

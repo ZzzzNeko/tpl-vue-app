@@ -102,6 +102,10 @@ module.exports = {
     new webpack.ProgressPlugin({
       activeModules: false,
     }),
+    new webpack.DefinePlugin({
+      "APP_ENV": JSON.stringify(process.env.APP_ENV),
+      "APP_MODE": JSON.stringify(process.env.APP_MODE)
+    }),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: "Vue-App",
