@@ -4,8 +4,21 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', name: 'index', component: () => import(/* webpackChunkName: 'index' */ `@/pages/index.vue`) },
-  { path: '*', name: 'error', component: () => import(/* webpackChunkName: 'error' */ `@/pages/error.vue`) }
+  {
+    name: 'index',
+    path: '/',
+    alias: '/index',
+    component: () => import(/* webpackChunkName: 'index' */ `@/pages/index.vue`)
+  },
+  {
+    name: 'error',
+    path: '/error',
+    component: () => import(/* webpackChunkName: 'error' */ `@/pages/error.vue`)
+  },
+  {
+    path: '*',
+    redirect: '/error'
+  }
 ]
 
 const router = new VueRouter({ routes })
