@@ -62,3 +62,4 @@ shims-vue.d.ts
 
 默认支持 pug、sass、ts 语法扩展 <br>
 默认引入 vue、vue-router、vuex、axios
+默认引入 vue-class-component
