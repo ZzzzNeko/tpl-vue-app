@@ -1,8 +1,8 @@
-const path = require("path"); //用于处理模块路径
+const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
-const webpack = require("webpack"); //用于引入webpack内的模块
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const getResolvePath = (d) => path.resolve(__dirname, d);
 const srcResolvePath = getResolvePath("../src");
 
@@ -15,7 +15,7 @@ module.exports = {
     // 出口配置
     path: path.resolve(__dirname, "../dist"),
     filename: `[name].[hash:6].js`,
-    chunkFilename: `[name].[chunkhash:6].js`,
+    chunkFilename: `js/[name].[chunkhash:6].js`,
   },
   resolve: {
     // 模块解析相关配置,
@@ -30,6 +30,7 @@ module.exports = {
     // 优化处理相关配置
     splitChunks: {
       chunks: "all",
+      // minSize: 0,
     },
   },
   module: {
@@ -47,19 +48,18 @@ module.exports = {
       // 加载器相关配置
       {
         test: /\.css$/,
-        // include: srcResolvePath,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.scss$/,
         include: srcResolvePath,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.sass$/,
         include: srcResolvePath,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           {
             loader: "sass-loader",
@@ -103,14 +103,17 @@ module.exports = {
       activeModules: false,
     }),
     new webpack.DefinePlugin({
-      "APP_ENV": JSON.stringify(process.env.APP_ENV),
-      "APP_MODE": JSON.stringify(process.env.APP_MODE)
+      APP_ENV: JSON.stringify(process.env.APP_ENV),
+      APP_MODE: JSON.stringify(process.env.APP_MODE),
     }),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: "Vue-App",
       filename: "index.html",
       template: "public/index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].[chunkhash:6].css",
     }),
   ],
 };
