@@ -1,7 +1,9 @@
 const webpack = require("webpack"); //用于引入webpack内的模块
 const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin");
+const { merge } = require("webpack-merge");
+const baseConfig = require("./webpack.base");
 
-module.exports = {
+const devConfig = {
   mode: "development",
   devtool: "cheap-module-eval-source-map", // source map 相关配置
   devServer: {
@@ -22,3 +24,5 @@ module.exports = {
     new FriendlyErrorsPlugin(),
   ],
 };
+
+module.exports = merge(baseConfig, devConfig);

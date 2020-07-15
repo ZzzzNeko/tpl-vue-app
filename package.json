@@ -13,8 +13,8 @@
   },
   "homepage": "https://github.com/ZzzNeko/pt-vue-app#readme",
   "scripts": {
-    "serve": "node script/preprocess serve",
-    "build": "node script/preprocess build"
+    "serve": "node script/serve serve",
+    "build": "node script/build build"
   },
   "dependencies": {
     "axios": "^0.19.2",
