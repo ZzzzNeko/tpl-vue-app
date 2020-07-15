@@ -19,12 +19,6 @@ declare const APP_MODE: "development" | "production";
 
 通常项目开发时可能涉及到多个环境，如 本地、测试、正式 等，额外提供 `APP_ENV` 作为命令行参数注入项目全局
 
-## 脚本流程
-
-script 目录下提供了 preprocess.js 和 postprocess.js 文件，<br>
-`preprocess` 中使用了 commander 处理命令行交互，<br>
-`postprocess` 在 `build` 命令执行后默认调用
-
 ## 项目目录
 
 ```code
@@ -63,3 +57,12 @@ shims-vue.d.ts
 默认支持 pug、sass、ts 语法扩展 <br>
 默认引入 vue、vue-router、vuex、axios
 默认引入 vue-class-component
+
+## 样式定义
+
+默认引入 style/index.sass 文件
+
+- 使用 [colors.css](http://clrs.cc/) 作为基础色彩变量
+- 使用 [open-color](https://yeun.github.io/open-color/) 作为主要色彩变量
+- 引入 [normalize](github.com/necolas/normalize.css) 作为样式重置
+- index.sass 中添加了部分样式重置
