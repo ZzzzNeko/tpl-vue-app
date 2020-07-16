@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const getResolvePath = (d) => path.resolve(__dirname, d);
-const srcResolvePath = getResolvePath("../src");
 
 module.exports = {
   entry: {
@@ -42,7 +41,6 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        include: srcResolvePath,
         loader: "vue-loader",
       },
       // 加载器相关配置
@@ -52,12 +50,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        include: srcResolvePath,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.sass$/,
-        include: srcResolvePath,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
@@ -74,17 +70,14 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        include: srcResolvePath,
         use: ["pug-plain-loader"],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        include: srcResolvePath,
         use: ["file-loader"],
       },
       {
         test: /\.(png|jpg|gif)/,
-        include: srcResolvePath,
         use: [
           {
             loader: "url-loader",
