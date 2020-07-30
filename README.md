@@ -1,4 +1,4 @@
-# pt-vue-app
+# tpl-vue-app
 
 Vue App 初始化模板
 

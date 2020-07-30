@@ -1,17 +1,17 @@
 {
-  "name": "pt-vue-app",
+  "name": "tpl-vue-app",
   "version": "1.0.0",
   "author": "ZzzNeko",
   "description": "A project init template for vue app",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ZzzNeko/pt-vue-app.git"
+    "url": "https://github.com/ZzzNeko/tpl-vue-app.git"
   },
   "bugs": {
-    "url": "https://github.com/ZzzNeko/pt-vue-app/issues"
+    "url": "https://github.com/ZzzNeko/tpl-vue-app/issues"
   },
-  "homepage": "https://github.com/ZzzNeko/pt-vue-app#readme",
+  "homepage": "https://github.com/ZzzNeko/tpl-vue-app#readme",
   "scripts": {
     "serve": "node script/serve serve",
     "build": "node script/build build"
